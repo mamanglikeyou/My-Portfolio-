@@ -89,10 +89,10 @@ const Profile = ({ data }: ProfileProps) => {
         <div className="flex gap-x-4">
           <div className="flex items-center">
             <Image
-              src={"/images/satria-3.jpg"}
+              src={"/images/dani-1.jpg"}
               width={80}
               height={80}
-              alt="Satria Bahari"
+              alt="Dani Ramdani"
               className="rounded-full border-2 border-neutral-400 transition-all duration-300 dark:border-neutral-600 lg:hover:scale-105"
             />
           </div>

@@ -1,9 +1,9 @@
 {
   "HomePage": {
-    "intro": "Hi, I'm Satria Bahari",
-    "location": "Based in Jambi, Indonesia 🇮🇩",
+    "intro": "Hi, I'm Dani Ramdani",
+    "location": "Based in Garut, Indonesia",
     "location_type": "Onsite",
-    "resume": "Experienced and passionate Fullstack Developer specializing in building scalable and efficient digital solutions. On the frontend, I work with Next.js, TypeScript, and Tailwind CSS to craft responsive and accessible user interfaces. On the backend, I develop robust services using Golang, and for mobile, I build native Android apps with Kotlin. I’m a collaborative and detail-oriented engineer committed to delivering well-structured, high-performance applications across platforms.",
+    "resume": "I’m passionate about building data-driven web applications and exploring how AI can enhance user experience and decision-making. With a strong interest in both Web Development and Data Science, I love creating digital solutions that are not only functional but also intelligent.",
     "skills": {
       "title": "Skills",
       "sub_title": "My professional skills."
@@ -17,11 +17,11 @@
     "title": "About",
     "description": "A brief introduction to who I am.",
     "resume": {
-      "paragraf_1": "Hello there! Thank you for visiting my personal website. I'm Satria Bahari, a student majoring in Information Systems at the University of Jambi. I'm a Fullstack Developer with a passion for building impactful software products. My stack includes modern frontend technologies like Next.js, TypeScript, and Tailwind CSS, as well as backend development using Golang. For mobile applications, I develop native Android apps using Kotlin.",
+      "paragraf_1": "Hi! I’m a fresh graduate in Informatics Engineering with a strong passion for Web Development and Data Science. During my studies, I gained hands-on experience as a Full-stack Developer through internships and also worked on academic projects in Deep Learning, Natural Language Processing, and recommendation systems.",
 
-      "paragraf_2": "I enjoy creating solutions that are both user-friendly and performant. Whether it's building intuitive interfaces or architecting backend services, I aim to bring efficiency and clarity into every layer of the application. I’m a fast learner who thrives in dynamic environments, and I enjoy solving complex problems collaboratively.",
+      "paragraf_2": "I enjoy turning ideas into functional digital solutions, whether by developing web applications with Laravel, PHP, MySQL, HTML, CSS, and JavaScript, or by analyzing data and building models with Python, TensorFlow, and PyTorch.",
 
-      "paragraf_3": "I believe that great communication and team synergy are key to success in software development. My experience has shaped my technical and analytical skills, as well as my leadership qualities. I'm always excited to work in teams, learn from others, and contribute to impactful projects.",
+      "paragraf_3": "I’m an analytical and adaptive learner who is eager to keep growing and contribute to creating innovative, data-driven technologies.",
 
       "paragraf_4": "Best regards,"
     },
@@ -161,9 +161,9 @@
         "title": "Let's Connect",
         "description": "Connect with me professionally."
       },
-      "tiktok": {
+      "steam": {
         "title": "Join the Fun",
-        "description": "Watch engaging and fun content."
+        "description": "Connect and play together."
       },
       "github": {
         "title": "Explore the Code",
@@ -185,7 +185,7 @@
   "Footer": {
     "hire": "Hire me.",
     "copyright_1": "COPYRIGHT © ",
-    "copyright_2": "Satria Bahari. All rights reserved."
+    "copyright_2": "Dani Ramdani. All rights reserved."
   },
   "LocaleSwitcher": {
     "en": "🇺🇸",

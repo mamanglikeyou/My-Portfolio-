@@ -4,12 +4,12 @@ const TrueFocusService = () => {
   return (
     <div className="flex h-full items-center justify-center px-8 py-6">
       <TrueFocus
-        sentence="Web Mobile AI UI/UX"
+        sentence="Web AI"
         manualMode={false}
         blurAmount={5}
         borderColor="green"
         animationDuration={1}
-        pauseBetweenAnimations={1}
+        pauseBetweenAnimations={0.5}
       />
     </div>
   );

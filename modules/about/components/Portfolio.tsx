@@ -9,6 +9,8 @@ const Portfolio = () => {
     "https://www.canva.com/design/DAGGNurMYa0/Qz-ESp1akKih_dBsdV0_0w/edit?utm_content=DAGGNurMYa0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton";
 
   return (
+    <>
+      {/* 
     <Link
       href={PORTFOLIO_URL}
       target="_blank"
@@ -19,6 +21,8 @@ const Portfolio = () => {
       <DownloadIcon />
       <span>{t("portfolio_download_button")}</span>
     </Link>
+    */}
+    </>
   );
 };
 

@@ -28,11 +28,11 @@ const EducationCard = ({
         </a>
         <div className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
           <div className="flex flex-col gap-1 md:flex-row md:gap-2">
-            <span>{degree}</span>
+            <span>{major}</span>
             <span className="hidden text-neutral-300 dark:text-neutral-700 md:block">
               •
             </span>
-            <span>{major}</span>
+            <span>{degree}</span>
           </div>
           <div className="flex flex-col gap-1 text-[12px] md:flex-row md:gap-2">
             <span className="dark:text-neutral-500">

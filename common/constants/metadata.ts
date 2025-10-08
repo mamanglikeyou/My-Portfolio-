@@ -1,16 +1,16 @@
 export const METADATA = {
-  creator: "Satria Bahari",
+  creator: "Dani Ramdani",
   description: "Personal website, portfolio, blog",
-  keyword: "satria, satria bahari",
+  keyword: "dani, Dani Ramdani",
   authors: {
-    name: "Satria Bahari",
+    name: "Dani Ramdani",
     url: process.env.DOMAIN,
   },
   openGraph: {
     url: process.env.DOMAIN,
-    siteName: "Satria Bahari",
+    siteName: "Dani Ramdani",
     locale: "id-ID",
   },
-  exTitle: "| Satria Bahari",
-  profile: "/images/satria.jpg",
+  exTitle: "| Dani Ramdani",
+  profile: "/images/dani.jpg",
 };

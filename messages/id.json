@@ -1,9 +1,9 @@
 {
   "HomePage": {
-    "intro": "Hai, saya Satria Bahari",
-    "location": "Berdomisili di Jambi, Indonesia 🇮🇩",
-    "location_type": "Tatap Muka",
-    "resume": "Pengembang Fullstack yang berpengalaman dan penuh semangat, berspesialisasi dalam membangun solusi digital yang skalabel dan efisien. Di sisi frontend, saya menggunakan Next.js, TypeScript, dan Tailwind CSS untuk membuat antarmuka pengguna yang responsif dan mudah diakses. Di sisi backend, saya mengembangkan layanan yang tangguh menggunakan Golang, dan untuk mobile, saya membangun aplikasi Android native menggunakan Kotlin. Saya adalah engineer yang kolaboratif dan berorientasi pada detail, berkomitmen untuk menghadirkan aplikasi lintas platform yang terstruktur dengan baik dan berkinerja tinggi.",
+    "intro": "Hai, Dani Ramdani",
+    "location": "Berdomisili di Garut, Indonesia",
+    "location_type": "Di Tempat",
+    "resume": "Saya bersemangat membangun aplikasi web berbasis data dan mengeksplorasi bagaimana AI dapat meningkatkan pengalaman pengguna dan pengambilan keputusan. Dengan minat yang kuat pada Pengembangan Web dan Ilmu Data, saya senang menciptakan solusi digital yang tidak hanya fungsional tetapi juga cerdas.",
     "skills": {
       "title": "Keahlian",
       "sub_title": "Keahlian profesional saya."
@@ -17,11 +17,11 @@
     "title": "Tentang",
     "description": "Perkenalan singkat tentang siapa saya.",
     "resume": {
-      "paragraf_1": "Halo! Terima kasih telah mengunjungi situs pribadi saya. Saya Satria Bahari, seorang mahasiswa Sistem Informasi di Universitas Jambi. Saya adalah seorang Fullstack Developer dengan minat besar dalam membangun produk perangkat lunak yang berdampak. Stack teknologi saya meliputi teknologi frontend modern seperti Next.js, TypeScript, dan Tailwind CSS, serta pengembangan backend menggunakan Golang. Untuk aplikasi mobile, saya mengembangkan aplikasi Android native menggunakan Kotlin.",
+      "paragraf_1": "Halo! Saya adalah lulusan baru Teknik Informatika dengan minat besar pada Web Development dan Data Science. Selama masa studi, saya mendapatkan pengalaman langsung sebagai Full-stack Developer melalui program magang, serta mengerjakan berbagai proyek akademik di bidang Deep Learning, Natural Language Processing, dan sistem rekomendasi.",
 
-      "paragraf_2": "Saya menikmati menciptakan solusi yang ramah pengguna dan memiliki performa tinggi. Baik saat membangun antarmuka yang intuitif maupun merancang layanan backend, saya selalu berusaha membawa efisiensi dan kejelasan pada setiap lapisan aplikasi. Saya pembelajar cepat yang tumbuh dalam lingkungan dinamis dan senang menyelesaikan masalah kompleks secara kolaboratif.",
+      "paragraf_2": "Saya senang mengubah ide menjadi solusi digital yang fungsional, baik melalui pengembangan aplikasi web menggunakan Laravel, PHP, MySQL, HTML, CSS, dan JavaScript, maupun dengan menganalisis data serta membangun model menggunakan Python, TensorFlow, dan PyTorch.",
 
-      "paragraf_3": "Saya percaya bahwa komunikasi yang baik dan sinergi tim adalah kunci kesuksesan dalam pengembangan perangkat lunak. Pengalaman saya telah membentuk kemampuan teknis dan analitis saya, serta kualitas kepemimpinan saya. Saya selalu bersemangat untuk bekerja dalam tim, belajar dari orang lain, dan berkontribusi pada proyek yang berdampak.",
+      "paragraf_3": "Saya adalah individu yang analitis, adaptif, dan memiliki semangat belajar tinggi untuk terus berkembang serta berkontribusi dalam menciptakan teknologi yang inovatif dan berbasis data.",
 
       "paragraf_4": "Salam hangat,"
     },
@@ -161,9 +161,9 @@
         "title": "Mari Terhubung",
         "description": "Terhubung secara profesional dengan saya."
       },
-      "tiktok": {
+      "steam": {
         "title": "Ikut Seru-seruan",
-        "description": "Tonton konten yang seru dan menarik."
+        "description": "Terhubung dan bermain bersama."
       },
       "github": {
         "title": "Jelajahi Kode",
@@ -185,7 +185,7 @@
   "Footer": {
     "hire": "Rekrut saya.",
     "copyright_1": "HAK CIPTA © ",
-    "copyright_2": "Satria Bahari. Seluruh hak dilindungi."
+    "copyright_2": "Dani Ramdani. Seluruh hak dilindungi."
   },
   "LocaleSwitcher": {
     "en": "🇺🇸",
