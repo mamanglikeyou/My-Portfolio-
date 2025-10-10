@@ -15,6 +15,8 @@ import {
   SiTensorflow,
   SiPytorch,
   SiGoogle,
+  SiFlutter,
+  SiDart,
 } from "react-icons/si";
 
 export type SkillProps = {
@@ -82,6 +84,18 @@ export const STACKS: SkillProps = {
     icon: <SiPython size={iconSize} />,
     background: "bg-blue-400",
     color: "text-blue-400",
+    isActive: true,
+  },
+  Flutter: {
+    icon: <SiFlutter size={iconSize} />,
+    background: "bg-cyan-500",
+    color: "text-cyan-500",
+    isActive: true,
+  },
+  Dart: {
+    icon: <SiDart size={iconSize} />,
+    background: "bg-sky-600",
+    color: "text-sky-600",
     isActive: true,
   },
   Pandas: {
