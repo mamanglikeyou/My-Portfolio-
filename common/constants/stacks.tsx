@@ -86,18 +86,6 @@ export const STACKS: SkillProps = {
     color: "text-blue-400",
     isActive: true,
   },
-  Flutter: {
-    icon: <SiFlutter size={iconSize} />,
-    background: "bg-cyan-500",
-    color: "text-cyan-500",
-    isActive: true,
-  },
-  Dart: {
-    icon: <SiDart size={iconSize} />,
-    background: "bg-sky-600",
-    color: "text-sky-600",
-    isActive: true,
-  },
   Pandas: {
     icon: <SiPython size={iconSize} />, // tidak ada icon khusus, pakai Python
     background: "bg-indigo-600",
@@ -150,6 +138,18 @@ export const STACKS: SkillProps = {
     icon: <BsRobot size={iconSize} />,
     background: "bg-fuchsia-700",
     color: "text-fuchsia-700",
+    isActive: true,
+  },
+  Flutter: {
+    icon: <SiFlutter size={iconSize} />,
+    background: "bg-cyan-500",
+    color: "text-cyan-500",
+    isActive: true,
+  },
+  Dart: {
+    icon: <SiDart size={iconSize} />,
+    background: "bg-sky-600",
+    color: "text-sky-600",
     isActive: true,
   },
   Github: {
