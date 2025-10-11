@@ -14,14 +14,22 @@ const AnimatedListProject = () => {
       ?.filter((item: ProjectItem) => item?.is_show)
       .sort((a: ProjectItem, b: ProjectItem) => b.id - a.id)
       .map((item: ProjectItem) => ({
-        image: item.image.startsWith("/") ? item.image : `/${item.image}`,
+        image: item.image.startsWith("http")
+          ? item.image
+          : item.image.startsWith("/")
+            ? item.image
+            : `/${item.image}`,
         slug: `/projects/${item.slug}`,
       })) ?? [];
 
   return (
     <AnimatedList
       items={projects.map((item: ProjectItem) => ({
-        image: item.image.startsWith("/") ? item.image : `/${item.image}`,
+        image: item.image.startsWith("http")
+          ? item.image
+          : item.image.startsWith("/")
+            ? item.image
+            : `/${item.image}`,
         href: item.slug,
       }))}
       itemImage={true}
