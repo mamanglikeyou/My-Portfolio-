@@ -8,7 +8,7 @@ import { METADATA } from "@/common/constants/metadata";
 
 export const metadata: Metadata = {
   title: `Projects ${METADATA.exTitle}`,
-  description: "Software Engineer portfolio ideas",
+  description: "Web Developer portfolio ideas",
   keywords: "portfolio frontend developer",
   alternates: {
     canonical: `${process.env.DOMAIN}/projects`,
