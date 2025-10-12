@@ -83,11 +83,11 @@ export const BENTO: BentoItemProps[] = [
     href: "/chat",
     colSpan: 1,
     className: "from-gray-700 to-gray-900",
-    isShow: true,
+    isShow: false,
   },
   {
     title: "Services",
-    description: "End-to-end solutions in web, mobile, AI, and design.",
+    description: "End-to-end solutions in Web and AI.",
     label: "Services",
     icon: <ContactIcon size={size} />,
     visual: <TrueFocusService />,

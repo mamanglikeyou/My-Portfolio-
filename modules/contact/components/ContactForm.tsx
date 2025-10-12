@@ -51,6 +51,9 @@ const ContactForm = () => {
     }
   };
 
+  const showForm = false;
+  if (!showForm) return null;
+
   return (
     <div className="space-y-4">
       <h2>{t("form.title")}</h2>

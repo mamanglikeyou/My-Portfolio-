@@ -9,12 +9,16 @@ import useIsMobile from "@/hooks/useIsMobile";
 import { useRouter } from "next/navigation";
 
 const ChatButton = () => {
+  const isChatEnabled = false;
+
   const { isOpen, toggleChat } = useChatStore();
   const [isHover, setIsHover] = useState(false);
 
   const router = useRouter();
 
   const isMobile = useIsMobile();
+
+  if (!isChatEnabled) return null;
 
   const handleClick = () => {
     isMobile ? router.push("/chat") : toggleChat();

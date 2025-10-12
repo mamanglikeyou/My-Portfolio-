@@ -1,4 +1,4 @@
-import { BiCodeAlt as SkillsIcon } from "react-icons/bi";
+import { FiAward as SkillsIcon } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 
 import SectionHeading from "@/common/components/elements/SectionHeading";
