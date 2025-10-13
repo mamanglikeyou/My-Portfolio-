@@ -1,9 +1,4 @@
 
-# <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Supabase and more.</p> 
-
-<br/>
-
-
 ## 📘 Introduction
 
 This is my personal website built using modern technologies such as Next.js and TypeScript.
