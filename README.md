@@ -1,5 +1,5 @@
-  <h1>satriabahari.my.id</h1>
-  <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Supabase and more.</p> 
+
+# <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Supabase and more.</p> 
 
 <br/>
 
