@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import SpotlightCard from "@/common/components/elements/SpotlightCard";
 import { BentoItemProps } from "@/common/types/bento";
 
 const BentoCard = ({
-  title,
-  description,
+  translationKey,
+  title: titleProp,
+  description: descriptionProp,
   label,
   icon,
   visual,
@@ -13,6 +17,14 @@ const BentoCard = ({
   colSpan,
   className,
 }: BentoItemProps) => {
+  const t = useTranslations("HomePage.bento.items");
+
+  // Use translation if translationKey is provided, otherwise fallback to props
+  const title = translationKey ? t(`${translationKey}.title`) : titleProp;
+  const description = translationKey
+    ? t(`${translationKey}.description`)
+    : descriptionProp;
+
   return (
     <SpotlightCard
       className={`!p-0 md:col-span-${colSpan ?? 1}  ${colSpan === 2 ? "grid grid-cols-2 gap-2" : "flex flex-col"} ${className}`}

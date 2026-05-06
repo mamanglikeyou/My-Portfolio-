@@ -1,4 +1,5 @@
 export interface CareerProps {
+  translationKey: string;
   position: string;
   company: string;
   logo: string | null;

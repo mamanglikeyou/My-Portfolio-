@@ -31,8 +31,7 @@ const size = 22;
 
 export const BENTO: BentoItemProps[] = [
   {
-    title: "Projects Showcase",
-    description: "A selection of real apps built to solve real problems.",
+    translationKey: "projects",
     label: "Projects",
     icon: <ProjectIcon size={size} />,
     visual: <AnimatedListProject />,
@@ -42,8 +41,7 @@ export const BENTO: BentoItemProps[] = [
     isShow: true,
   },
   {
-    title: "About Me",
-    description: "Who I am and what I do.",
+    translationKey: "about",
     label: "About",
     icon: <AboutIcon size={size} />,
     visual: <StackImagesPersonal />,
@@ -53,8 +51,7 @@ export const BENTO: BentoItemProps[] = [
     isShow: true,
   },
   {
-    title: "Skills & Tools",
-    description: "Covering, Web and Data Science technologies.",
+    translationKey: "skills",
     label: "Stack",
     icon: <DashboardIcon size={size} />,
     visual: <MarqueeIcons />,
@@ -64,8 +61,7 @@ export const BENTO: BentoItemProps[] = [
     isShow: true,
   },
   {
-    title: "Achievements",
-    description: "Milestones from programs, projects, and communities.",
+    translationKey: "achievements",
     label: "Achievements",
     icon: <AchievementIcon size={size} />,
     visual: <AchievementFolder />,
@@ -75,8 +71,7 @@ export const BENTO: BentoItemProps[] = [
     isShow: true,
   },
   {
-    title: "Chat Room",
-    description: "Open space to talk and collaborate.",
+    translationKey: "chat",
     label: "Chat",
     icon: <ChatRoomIcon size={size} />,
     visual: <ChatPreview />,
@@ -86,8 +81,7 @@ export const BENTO: BentoItemProps[] = [
     isShow: false,
   },
   {
-    title: "Services",
-    description: "End-to-end solutions in Web and AI.",
+    translationKey: "services",
     label: "Services",
     icon: <ContactIcon size={size} />,
     visual: <TrueFocusService />,

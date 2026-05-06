@@ -10,7 +10,15 @@
     },
     "bento": {
       "title": "Featured Sections",
-      "sub_title": "Explore everything I’ve crafted, contributed, and accomplished."
+      "sub_title": "Explore everything I’ve crafted, contributed, and accomplished.",
+      "items": {
+        "projects": { "title": "Projects Showcase", "description": "A selection of real apps built to solve real problems." },
+        "about": { "title": "About Me", "description": "Who I am and what I do." },
+        "skills": { "title": "Skills & Tools", "description": "Covering, Web and Data Science technologies." },
+        "achievements": { "title": "Achievements", "description": "Milestones from programs, projects, and communities." },
+        "chat": { "title": "Chat Room", "description": "Open space to talk and collaborate." },
+        "services": { "title": "Services", "description": "End-to-end solutions in Web and AI." }
+      }
     }
   },
   "AboutPage": {
@@ -27,7 +35,35 @@
     },
     "career": {
       "title": "Career",
-      "sub_title": "My professional journey."
+      "sub_title": "My professional journey.",
+      "month": "Month",
+      "months": "Months",
+      "present": "Present",
+      "show_responsibilities": "Show responsibilities",
+      "hide_responsibilities": "Hide responsibilities",
+      "careers": {
+        "lab_law": {
+          "position": "Web Development",
+          "type": "Internship",
+          "location_type": "Remote",
+          "responsibilities": [
+            "Developed a web application using Laravel integrated with MySQL database.",
+            "Built and maintained core backend features including user authentication, Google account registration, database configuration, and password recovery, improving user security and accessibility.",
+            "Ensured smooth frontend–backend integration while maintaining and enhancing website functionality to meet user needs."
+          ]
+        },
+        "inti": {
+          "position": "Internal Audit",
+          "type": "Internship",
+          "location_type": "Onsite",
+          "responsibilities": [
+            "Acted as a Full-Stack Developer in building the SIM-TLA (Sistem Informasi Monitoring Tindak Lanjut Audit) web application to support audit follow up monitoring within the company.",
+            "Built frontend with HTML, CSS, and JavaScript and backend with PHP and MySQL.",
+            "Implemented key features including authentication, audit assignment management, follow up report management, audit record tracking, and user management.",
+            "Conducted testing and maintenance to ensure the system operates effectively in the company's audit process."
+          ]
+        }
+      }
     },
     "education": {
       "title": "Education",

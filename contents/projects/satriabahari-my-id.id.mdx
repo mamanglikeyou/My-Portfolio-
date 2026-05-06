@@ -1,0 +1,141 @@
+## 📘 Pendahuluan
+
+Ini adalah website pribadi saya yang dibangun dari nol sejak **Februari 2024** menggunakan teknologi modern seperti **Next.js** dan **TypeScript**.
+
+Saya menggunakan platform ini untuk:
+
+- Menampilkan portofolio dan proyek saya
+- Berbagi sumber daya dan statistik pengembang
+- Bereksperimen dengan teknologi web baru
+
+Situs ini terus berkembang. Anda dipersilakan untuk fork atau menjelajahi kode sumbernya. Jika dirasa bermanfaat, pertimbangkan untuk memberikan ⭐ di GitHub.
+
+Punya pertanyaan atau masukan? Saya senang mendengarnya 🙌
+
+---
+
+## ⚙️ Teknologi yang Digunakan
+
+Proyek ini didukung oleh:
+
+- ⚛️ **Next.js**
+- 🔰 **TypeScript**
+- 💠 **Tailwind CSS v3**
+- 🦫 **Zustand**
+- 〰️ **SWR**
+- ➰ **Framer Motion**
+- 💢 **React Icons**
+- 🌐 **Next-Intl (i18n)**
+- 📦 **Absolute Imports & Path Alias**
+- 📏 **ESLint & Prettier**
+- 📌 **Conventional Commit Lint**
+
+---
+
+## 🚀 Fitur
+
+### 🕗 Statistik Wakatime
+
+Menampilkan statistik coding langsung dari Wakatime melalui API route serverless menggunakan `api/wakatime`
+
+### 🗳 Pameran Proyek
+
+Data proyek disimpan di **Supabase PostgreSQL**, dan ditampilkan menggunakan:
+
+- **ISR (revalidasi 1 detik)**
+- **SSR untuk akses cepat**
+
+### 🌍 Internasionalisasi
+
+Dukungan multi-bahasa dengan `next-intl`
+Saat ini mencakup Bahasa Indonesia dan Bahasa Inggris.
+
+### 📊 Dasbor Pengembang
+
+Dasbor interaktif yang menampilkan:
+
+- Kontribusi GitHub
+- Jam coding Wakatime
+- Tantangan Codewars
+- Kecepatan mengetik Monkeytype
+
+Semua statistik diambil dari API publik dan ditampilkan secara dinamis.
+
+---
+
+## 🛠 Cara Memulai
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/satriabahari/satriabahari.my.id
+```
+
+atau gunakan template starter:
+
+```bash
+npx create-next-app -e https://github.com/satriabahari/satriabahari.my.id nama-aplikasi-anda
+```
+
+```bash
+npx degit satriabahari/satriabahari.my.id nama-aplikasi-anda
+```
+
+Atau deploy langsung:
+
+[![Deploy ke Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/satriabahari/satriabahari.my.id)  
+[![Deploy ke Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/satriabahari/satriabahari.my.id)
+
+---
+
+### 2. Install Dependensi
+
+```bash
+bun install
+```
+
+> ⚠️ Pastikan Anda menggunakan **Bun** untuk kompatibilitas dengan Husky hooks dan script.
+
+---
+
+### 3. Konfigurasi Environment Variables
+
+Salin `.env.example` ke `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Kemudian isi kredensial yang diperlukan...
+
+---
+
+### 4. Jalankan Server Development
+
+```bash
+bun run dev
+```
+
+Buka di browser Anda:
+
+```txt
+http://localhost:3000
+```
+
+Mulai edit dari:
+
+```txt
+src/pages/index.tsx
+```
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dirilis di bawah **Lisensi MIT**.  
+Bebas digunakan, dimodifikasi, dan didistribusikan untuk keperluan pribadi maupun komersial.
+
+---
+
+Terima kasih sudah mampir!  
+🧠 Dibuat dengan rasa ingin tahu, cinta, dan kafein ☕ oleh [Satria Bahari](https://satriabahari.my.id)

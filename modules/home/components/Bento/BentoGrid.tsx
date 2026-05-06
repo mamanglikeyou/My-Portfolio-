@@ -1,3 +1,5 @@
+"use client";
+
 import BentoCard from "./BentoCard";
 import { SiBento as BentoIcon } from "react-icons/si";
 import { useTranslations } from "next-intl";

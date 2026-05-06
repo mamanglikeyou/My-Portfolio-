@@ -8,7 +8,7 @@ import matter from "gray-matter";
 
 import { MdxFileProps } from "../types/mdx";
 
-export const loadMdxFiles = (): MdxFileProps[] => {
+export const loadMdxFiles = (locale?: string): MdxFileProps[] => {
   const dirPath = path.join(process.cwd(), "contents", "projects");
 
   if (!fs.existsSync(dirPath)) {
@@ -17,8 +17,23 @@ export const loadMdxFiles = (): MdxFileProps[] => {
 
   const files = fs.readdirSync(dirPath);
 
-  const contents = files.map((file) => {
-    const filePath = path.join(dirPath, file);
+  // Filter out locale-specific files from the base list
+  const baseFiles = files.filter(
+    (file) => !file.match(/\.[a-z]{2}\.mdx$/),
+  );
+
+  const contents = baseFiles.map((file) => {
+    const slug = file.replace(".mdx", "");
+
+    // Try to load locale-specific file first (e.g., ParaphrasingSystem.id.mdx)
+    let filePath: string;
+    const localeFile = `${slug}.${locale}.mdx`;
+    if (locale && locale !== "en" && files.includes(localeFile)) {
+      filePath = path.join(dirPath, localeFile);
+    } else {
+      filePath = path.join(dirPath, file);
+    }
+
     const source = fs.readFileSync(filePath, "utf-8");
     const { content, data } = matter(source);
 
@@ -26,7 +41,7 @@ export const loadMdxFiles = (): MdxFileProps[] => {
     const mdxContent = mdxCompiler.processSync(content).toString();
 
     return {
-      slug: file.replace(".mdx", ""),
+      slug,
       frontMatter: data,
       content: mdxContent,
     };

@@ -2,6 +2,7 @@ import { CareerProps } from "../types/careers";
 
 export const CAREERS: CareerProps[] = [
   {
+    translationKey: "lab_law",
     position: "Web Development",
     company: "LAB LAW",
     logo: "/images/careers/lab_law.jpg",
@@ -20,6 +21,7 @@ export const CAREERS: CareerProps[] = [
     isShow: true,
   },
   {
+    translationKey: "inti",
     position: "Internal Audit",
     company: "PT Industri Telekomunikasi Indonesia (Persero)",
     logo: "/images/careers/inti.png",
@@ -34,8 +36,9 @@ export const CAREERS: CareerProps[] = [
       "Acted as a Full-Stack Developer in building the SIM-TLA (Sistem Informasi Monitoring Tindak Lanjut Audit) web application to support audit follow up monitoring within the company.",
       "Built frontend with HTML, CSS, and JavaScript and backend with PHP and MySQL.",
       "Implemented key features including authentication, audit assignment management, follow up report management, audit record tracking, and user management.",
-      "Conducted testing and maintenance to ensure the system operates effectively in the company’s audit process.",
+      "Conducted testing and maintenance to ensure the system operates effectively in the company's audit process.",
     ],
     isShow: true,
   },
 ];
+

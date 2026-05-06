@@ -7,28 +7,26 @@ import { useState } from "react";
 import { BsBuildings as CompanyIcon } from "react-icons/bs";
 import { HiChevronRight as ChevronIcon } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { differenceInMonths, differenceInYears, format } from "date-fns";
 
 import SpotlightCard from "@/common/components/elements/SpotlightCard";
 import { CareerProps } from "@/common/types/careers";
 
 const CareerCard = ({
-  position,
+  translationKey,
   company,
   logo,
   location,
   start_date,
   end_date,
   link,
-  type,
-  location_type,
   responsibilities,
   indexCareer,
 }: CareerProps) => {
   const [isShowResponsibility, setIsShowResponsibility] = useState(false);
 
-  const locale = useLocale();
+  const t = useTranslations("AboutPage.career");
 
   const startDate = new Date(start_date);
   const endDate = end_date ? new Date(end_date) : new Date();
@@ -36,21 +34,36 @@ const CareerCard = ({
   const durationYears = differenceInYears(endDate, startDate);
   const durationMonths = differenceInMonths(endDate, startDate) % 12;
 
-  const yearText =
-    locale == "en" ? `year${durationYears > 1 ? "s" : ""}` : "tahun";
+  const yearText = durationYears > 1 ? t("months") : t("month");
 
   let durationText = "";
   if (durationYears > 0) {
     durationText += `${durationYears} ${yearText}`;
   }
   if (durationMonths > 0 || durationYears === 0) {
-    durationText += `${durationMonths} Month${durationMonths > 1 ? "s" : ""}`;
+    durationText += `${durationMonths} ${t(durationMonths > 1 ? "months" : "month")}`;
   }
 
-  const hideText = locale == "en" ? "Hide" : "Sembunyikan";
-  const showText = locale == "en" ? "Show" : "Tampilkan";
-  const responsibilityText =
-    locale == "en" ? "responsibilities" : "tanggung jawab";
+  // Get translated values via translationKey
+  const position = t(`careers.${translationKey}.position`);
+  const type = t(`careers.${translationKey}.type`);
+  const locationType = t(`careers.${translationKey}.location_type`);
+
+  // Get translated responsibilities array
+  const translatedResponsibilities: string[] = [];
+  if (responsibilities) {
+    for (let i = 0; i < responsibilities.length; i++) {
+      try {
+        translatedResponsibilities.push(
+          t(`careers.${translationKey}.responsibilities.${i}`),
+        );
+      } catch {
+        translatedResponsibilities.push(responsibilities[i]);
+      }
+    }
+  }
+
+  const presentText = t("present");
 
   return (
     <SpotlightCard className="flex items-start gap-5 p-6">
@@ -84,7 +97,7 @@ const CareerCard = ({
           <div className="flex flex-col gap-2 text-[13px] md:flex-row">
             <div className="flex gap-1 text-neutral-600 dark:text-neutral-400">
               <span>{format(startDate, "MMM yyyy")}</span> -{" "}
-              <span>{end_date ? format(endDate, "MMM yyyy") : "Present"}</span>
+              <span>{end_date ? format(endDate, "MMM yyyy") : presentText}</span>
             </div>
 
             <span className="hidden text-neutral-300 dark:text-neutral-700 md:block">
@@ -103,11 +116,11 @@ const CareerCard = ({
               •
             </span>
             <span className="text-neutral-600 dark:text-neutral-400">
-              {location_type}
+              {locationType}
             </span>
           </div>
 
-          {responsibilities != null && (
+          {translatedResponsibilities.length > 0 && (
             <>
               <button
                 onClick={() => setIsShowResponsibility(!isShowResponsibility)}
@@ -121,8 +134,9 @@ const CareerCard = ({
                   })}
                 />
                 <p className="text-sm">
-                  {isShowResponsibility ? hideText : showText}{" "}
-                  {responsibilityText}
+                  {isShowResponsibility
+                    ? t("hide_responsibilities")
+                    : t("show_responsibilities")}
                 </p>
               </button>
               <AnimatePresence>
@@ -134,7 +148,7 @@ const CareerCard = ({
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    {responsibilities?.map((responsibility, index) => (
+                    {translatedResponsibilities.map((responsibility, index) => (
                       <motion.li key={index} layout>
                         {responsibility}
                       </motion.li>

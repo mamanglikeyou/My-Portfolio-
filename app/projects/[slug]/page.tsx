@@ -8,6 +8,7 @@ import { ProjectItem } from "@/common/types/projects";
 import { METADATA } from "@/common/constants/metadata";
 import { loadMdxFiles } from "@/common/libs/mdx";
 import { getProjectsDataBySlug } from "@/services/projects";
+import { getUserLocale } from "@/services/locale";
 
 interface ProjectDetailPageProps {
   params: { slug: string };
@@ -38,7 +39,8 @@ export const generateMetadata = async ({
 
 const getProjectDetail = async (slug: string): Promise<ProjectItem> => {
   const projects = await getProjectsDataBySlug(slug);
-  const contents = loadMdxFiles();
+  const locale = await getUserLocale();
+  const contents = loadMdxFiles(locale);
   const content = contents.find((item) => item.slug === slug);
   const response = { ...projects, content: content?.content };
   const data = JSON.parse(JSON.stringify(response));
@@ -47,9 +49,14 @@ const getProjectDetail = async (slug: string): Promise<ProjectItem> => {
 
 const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
   const data = await getProjectDetail(params?.slug);
+  const locale = await getUserLocale();
 
-  const PAGE_TITLE = data?.title;
-  const PAGE_DESCRIPTION = data?.description;
+  const PAGE_TITLE =
+    locale === "id" && data?.title_id ? data.title_id : data?.title;
+  const PAGE_DESCRIPTION =
+    locale === "id" && data?.description_id
+      ? data.description_id
+      : data?.description;
 
   return (
     <Container data-aos="fade-up">

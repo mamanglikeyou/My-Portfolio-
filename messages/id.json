@@ -10,7 +10,15 @@
     },
     "bento": {
       "title": "Bagian Unggulan",
-      "sub_title": "Jelajahi semua yang telah saya buat, kontribusikan, dan capai."
+      "sub_title": "Jelajahi semua yang telah saya buat, kontribusikan, dan capai.",
+      "items": {
+        "projects": { "title": "Pameran Proyek", "description": "Kumpulan aplikasi nyata yang dibuat untuk menyelesaikan masalah nyata." },
+        "about": { "title": "Tentang Saya", "description": "Siapa saya dan apa yang saya lakukan." },
+        "skills": { "title": "Keahlian & Alat", "description": "Mencakup teknologi Web dan Data Science." },
+        "achievements": { "title": "Pencapaian", "description": "Pencapaian dari program, proyek, dan komunitas." },
+        "chat": { "title": "Ruang Obrolan", "description": "Ruang terbuka untuk berbicara dan berkolaborasi." },
+        "services": { "title": "Layanan", "description": "Solusi menyeluruh dalam Web dan AI." }
+      }
     }
   },
   "AboutPage": {
@@ -27,7 +35,35 @@
     },
     "career": {
       "title": "Karier",
-      "sub_title": "Perjalanan profesional saya."
+      "sub_title": "Perjalanan profesional saya.",
+      "month": "Bulan",
+      "months": "Bulan",
+      "present": "Sekarang",
+      "show_responsibilities": "Tampilkan tanggung jawab",
+      "hide_responsibilities": "Sembunyikan tanggung jawab",
+      "careers": {
+        "lab_law": {
+          "position": "Pengembangan Web",
+          "type": "Magang",
+          "location_type": "Jarak Jauh",
+          "responsibilities": [
+            "Mengembangkan aplikasi web menggunakan Laravel yang terintegrasi dengan database MySQL.",
+            "Membangun dan memelihara fitur backend inti termasuk autentikasi pengguna, registrasi akun Google, konfigurasi database, dan pemulihan kata sandi, meningkatkan keamanan dan aksesibilitas pengguna.",
+            "Memastikan integrasi frontend–backend berjalan lancar sambil memelihara dan meningkatkan fungsionalitas website untuk memenuhi kebutuhan pengguna."
+          ]
+        },
+        "inti": {
+          "position": "Audit Internal",
+          "type": "Magang",
+          "location_type": "Di Tempat",
+          "responsibilities": [
+            "Berperan sebagai Full-Stack Developer dalam membangun aplikasi web SIM-TLA untuk mendukung pemantauan tindak lanjut audit di dalam perusahaan.",
+            "Membangun frontend dengan HTML, CSS, dan JavaScript serta backend dengan PHP dan MySQL.",
+            "Mengimplementasikan fitur utama termasuk autentikasi, manajemen penugasan audit, manajemen laporan tindak lanjut, pelacakan catatan audit, dan manajemen pengguna.",
+            "Melakukan pengujian dan pemeliharaan untuk memastikan sistem beroperasi secara efektif dalam proses audit perusahaan."
+          ]
+        }
+      }
     },
     "education": {
       "title": "Pendidikan",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HiOutlineArrowSmRight as ViewIcon } from "react-icons/hi";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { TbPinnedFilled as PinIcon } from "react-icons/tb";
 
 import Image from "@/common/components/elements/Image";
@@ -10,16 +10,24 @@ import { STACKS } from "@/common/constants/stacks";
 
 const ProjectCard = ({
   title,
+  title_id,
   slug,
   description,
+  description_id,
   image,
   stacks,
   is_featured,
 }: ProjectItem) => {
   const t = useTranslations("ProjectsPage");
+  const locale = useLocale();
+
+  const displayTitle = locale === "id" && title_id ? title_id : title;
+  const displayDescription =
+    locale === "id" && description_id ? description_id : description;
 
   const trimmedContent =
-    description.slice(0, 85) + (description.length > 85 ? "..." : "");
+    displayDescription.slice(0, 85) +
+    (displayDescription.length > 85 ? "..." : "");
 
   return (
     <Link href={`/projects/${slug}`}>
@@ -33,7 +41,7 @@ const ProjectCard = ({
         <div className="relative">
           <Image
             src={image}
-            alt={title}
+            alt={displayTitle}
             width={450}
             height={200}
             className="h-[200px] w-full rounded-t-xl object-cover"
@@ -45,7 +53,7 @@ const ProjectCard = ({
         </div>
         <div className="space-y-2 p-5">
           <h3 className="cursor-pointer text-lg text-neutral-700 transition-all duration-300 dark:text-neutral-300">
-            {title}
+            {displayTitle}
           </h3>
           <p className="text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
             {trimmedContent}
