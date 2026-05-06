@@ -21,7 +21,6 @@ const CareerCard = ({
   start_date,
   end_date,
   link,
-  responsibilities,
   indexCareer,
 }: CareerProps) => {
   const [isShowResponsibility, setIsShowResponsibility] = useState(false);
@@ -50,17 +49,14 @@ const CareerCard = ({
   const locationType = t(`careers.${translationKey}.location_type`);
 
   // Get translated responsibilities array
-  const translatedResponsibilities: string[] = [];
-  if (responsibilities) {
-    for (let i = 0; i < responsibilities.length; i++) {
-      try {
-        translatedResponsibilities.push(
-          t(`careers.${translationKey}.responsibilities.${i}`),
-        );
-      } catch {
-        translatedResponsibilities.push(responsibilities[i]);
-      }
+  let translatedResponsibilities: string[] = [];
+  try {
+    const rawData = t.raw(`careers.${translationKey}.responsibilities`);
+    if (Array.isArray(rawData)) {
+      translatedResponsibilities = rawData;
     }
+  } catch (error) {
+    translatedResponsibilities = [];
   }
 
   const presentText = t("present");
