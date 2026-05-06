@@ -1,9 +1,9 @@
 {
   "HomePage": {
     "intro": "Hi, I'm Dani Ramdani",
-    "location": "Based in Garut, Indonesia",
+    "location": "Based in Bandung, Indonesia",
     "location_type": "Onsite",
-    "resume": "I’m passionate about building data-driven web applications and exploring how AI can enhance user experience and decision-making. With a strong interest in both Web Development and Data Science, I love creating digital solutions that are not only functional but also intelligent.",
+    "resume": "I’m passionate about building web applications and exploring how AI can enhance user experience and decision-making. With a strong interest in both Web Development and Data Science, I love creating digital solutions that are not only functional but also intelligent.",
     "skills": {
       "title": "Skills",
       "sub_title": "My professional skills."

@@ -2,7 +2,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { BsFillBootstrapFill, BsRobot } from "react-icons/bs";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { FaNpm, FaGolang } from "react-icons/fa6";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaDatabase } from "react-icons/fa";
 import {
   SiCss3,
   SiGithub,
@@ -17,6 +17,15 @@ import {
   SiGoogle,
   SiFlutter,
   SiDart,
+  SiNuxtdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMicrosoftsqlserver,
+  SiRedis,
+  SiDocker,
+  SiPostman,
+  SiStreamlit,
 } from "react-icons/si";
 
 export type SkillProps = {
@@ -43,11 +52,28 @@ export const STACKS: SkillProps = {
     color: "text-blue-500",
     isActive: true,
   },
-
+  TailwindCSS: {
+    icon: <SiTailwindcss size={iconSize} />,
+    background: "bg-teal-500",
+    color: "text-teal-500",
+    isActive: true,
+  },
   JavaScript: {
     icon: <SiJavascript size={iconSize} />,
     background: "bg-yellow-400",
     color: "text-yellow-400",
+    isActive: true,
+  },
+  TypeScript: {
+    icon: <SiTypescript size={iconSize} />,
+    background: "bg-blue-600",
+    color: "text-blue-600",
+    isActive: true,
+  },
+  "Nuxt.js": {
+    icon: <SiNuxtdotjs size={iconSize} />,
+    background: "bg-green-600",
+    color: "text-green-600",
     isActive: true,
   },
   PHP: {
@@ -74,10 +100,22 @@ export const STACKS: SkillProps = {
     color: "text-cyan-700",
     isActive: true,
   },
-  Java: {
-    icon: <FaJava size={iconSize} />,
+  PostgreSQL: {
+    icon: <SiPostgresql size={iconSize} />,
+    background: "bg-sky-600",
+    color: "text-sky-600",
+    isActive: true,
+  },
+  "SQL Server": {
+    icon: <SiMicrosoftsqlserver size={iconSize} />,
     background: "bg-red-600",
     color: "text-red-600",
+    isActive: true,
+  },
+  Redis: {
+    icon: <SiRedis size={iconSize} />,
+    background: "bg-red-500",
+    color: "text-red-500",
     isActive: true,
   },
   Python: {
@@ -134,6 +172,12 @@ export const STACKS: SkillProps = {
     color: "text-yellow-400",
     isActive: true,
   },
+  Streamlit: {
+    icon: <SiStreamlit size={iconSize} />,
+    background: "bg-red-400",
+    color: "text-red-400",
+    isActive: true,
+  },
   ML: {
     icon: <BsRobot size={iconSize} />,
     background: "bg-fuchsia-700",
@@ -156,6 +200,24 @@ export const STACKS: SkillProps = {
     icon: <SiGithub size={iconSize} />,
     background: "bg-slate-800",
     color: "text-neutral-50",
+    isActive: true,
+  },
+  Docker: {
+    icon: <SiDocker size={iconSize} />,
+    background: "bg-blue-500",
+    color: "text-blue-500",
+    isActive: true,
+  },
+  Postman: {
+    icon: <SiPostman size={iconSize} />,
+    background: "bg-orange-500",
+    color: "text-orange-500",
+    isActive: true,
+  },
+  DBeaver: {
+    icon: <FaDatabase size={iconSize} />,
+    background: "bg-amber-600",
+    color: "text-amber-600",
     isActive: true,
   },
 };
