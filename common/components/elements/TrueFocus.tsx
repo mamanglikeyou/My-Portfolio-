@@ -11,6 +11,7 @@ interface TrueFocusProps {
   glowColor?: string;
   animationDuration?: number;
   pauseBetweenAnimations?: number;
+  separator?: string;
 }
 
 interface FocusRect {
@@ -28,8 +29,9 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
   glowColor = "rgba(0, 255, 0, 0.6)",
   animationDuration = 0.5,
   pauseBetweenAnimations = 1,
+  separator = " ",
 }) => {
-  const words = sentence.split(" ");
+  const words = sentence.split(separator);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lastActiveIndex, setLastActiveIndex] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -87,7 +89,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
 
   return (
     <div
-      className="relative flex flex-wrap items-center justify-center gap-4"
+      className="relative flex flex-wrap items-center justify-center text-center gap-4"
       ref={containerRef}
     >
       {words.map((word, index) => {

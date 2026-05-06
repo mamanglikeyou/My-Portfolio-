@@ -4,7 +4,8 @@ const TrueFocusService = () => {
   return (
     <div className="flex h-full items-center justify-center px-8 py-6">
       <TrueFocus
-        sentence="Web AI"
+        sentence="Web,Data Science"
+        separator=","
         manualMode={false}
         blurAmount={5}
         borderColor="green"
