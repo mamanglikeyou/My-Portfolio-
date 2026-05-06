@@ -1,4 +1,5 @@
 export type EducationProps = {
+  translationKey: string;
   school: string;
   major: string;
   logo: string;

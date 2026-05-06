@@ -12,12 +12,30 @@
       "title": "Featured Sections",
       "sub_title": "Explore everything I’ve crafted, contributed, and accomplished.",
       "items": {
-        "projects": { "title": "Projects Showcase", "description": "A selection of real apps built to solve real problems." },
-        "about": { "title": "About Me", "description": "Who I am and what I do." },
-        "skills": { "title": "Skills & Tools", "description": "Covering, Web and Data Science technologies." },
-        "achievements": { "title": "Achievements", "description": "Milestones from programs, projects, and communities." },
-        "chat": { "title": "Chat Room", "description": "Open space to talk and collaborate." },
-        "services": { "title": "Services", "description": "End-to-end solutions in Web and AI." }
+        "projects": {
+          "title": "Projects Showcase",
+          "description": "A selection of real apps built to solve real problems."
+        },
+        "about": {
+          "title": "About Me",
+          "description": "Who I am and what I do."
+        },
+        "skills": {
+          "title": "Skills & Tools",
+          "description": "Covering, Web and Data Science technologies."
+        },
+        "achievements": {
+          "title": "Achievements",
+          "description": "Milestones from programs, projects, and communities."
+        },
+        "chat": {
+          "title": "Chat Room",
+          "description": "Open space to talk and collaborate."
+        },
+        "services": {
+          "title": "Services",
+          "description": "End-to-end solutions in Web and AI."
+        }
       }
     }
   },
@@ -67,7 +85,17 @@
     },
     "education": {
       "title": "Education",
-      "sub_title": "My educational journey."
+      "sub_title": "My educational journey.",
+      "items": {
+        "uinsgd": {
+          "major": "Informatics Engineering",
+          "degree": "Bachelor's degree (S.T.)"
+        },
+        "sman1": {
+          "major": "Natural Sciences",
+          "degree": ""
+        }
+      }
     },
     "resume_download_button": "Download Resume",
     "portfolio_download_button": "Download Portfolio"

@@ -2,6 +2,7 @@ import { EducationProps } from "../types/education";
 
 export const EDUCATION: EducationProps[] = [
   {
+    translationKey: "uinsgd",
     school: "UIN Sunan Gunung Djati Bandung",
     major: "Informatics Engineering",
     logo: "/images/education/uinsgd.png",
@@ -13,6 +14,7 @@ export const EDUCATION: EducationProps[] = [
   },
 
   {
+    translationKey: "sman1",
     school: "SMA Negeri 1 Garut",
     major: "Natural Sciences",
     logo: "/images/education/sman1.png",
@@ -23,3 +25,4 @@ export const EDUCATION: EducationProps[] = [
     link: "https://sman1garut.sch.id/",
   },
 ];
+

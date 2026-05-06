@@ -12,12 +12,30 @@
       "title": "Bagian Unggulan",
       "sub_title": "Jelajahi semua yang telah saya buat, kontribusikan, dan capai.",
       "items": {
-        "projects": { "title": "Pameran Proyek", "description": "Kumpulan aplikasi nyata yang dibuat untuk menyelesaikan masalah nyata." },
-        "about": { "title": "Tentang Saya", "description": "Siapa saya dan apa yang saya lakukan." },
-        "skills": { "title": "Keahlian & Alat", "description": "Mencakup teknologi Web dan Data Science." },
-        "achievements": { "title": "Pencapaian", "description": "Pencapaian dari program, proyek, dan komunitas." },
-        "chat": { "title": "Ruang Obrolan", "description": "Ruang terbuka untuk berbicara dan berkolaborasi." },
-        "services": { "title": "Layanan", "description": "Solusi menyeluruh dalam Web dan AI." }
+        "projects": {
+          "title": "Pameran Proyek",
+          "description": "Kumpulan aplikasi nyata yang dibuat untuk menyelesaikan masalah nyata."
+        },
+        "about": {
+          "title": "Tentang Saya",
+          "description": "Siapa saya dan apa yang saya lakukan."
+        },
+        "skills": {
+          "title": "Keahlian & Alat",
+          "description": "Mencakup teknologi Web dan Data Science."
+        },
+        "achievements": {
+          "title": "Pencapaian",
+          "description": "Pencapaian dari program, proyek, dan komunitas."
+        },
+        "chat": {
+          "title": "Ruang Obrolan",
+          "description": "Ruang terbuka untuk berbicara dan berkolaborasi."
+        },
+        "services": {
+          "title": "Layanan",
+          "description": "Solusi menyeluruh dalam Web dan AI."
+        }
       }
     }
   },
@@ -67,7 +85,17 @@
     },
     "education": {
       "title": "Pendidikan",
-      "sub_title": "Perjalanan pendidikan saya."
+      "sub_title": "Perjalanan pendidikan saya.",
+      "items": {
+        "uinsgd": {
+          "major": "Teknik Informatika",
+          "degree": "Strata 1 (S.T.)"
+        },
+        "sman1": {
+          "major": "Matematika dan Ilmu Pengetahuan Alam",
+          "degree": ""
+        }
+      }
     },
     "resume_download_button": "Unduh CV",
     "portfolio_download_button": "Unduh Portofolio"
