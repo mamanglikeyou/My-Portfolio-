@@ -62,6 +62,20 @@
       "show_responsibilities": "Tampilkan tanggung jawab",
       "hide_responsibilities": "Sembunyikan tanggung jawab",
       "careers": {
+        "eiger": {
+          "position": "Developer Engineer",
+          "type": "Magang",
+          "location_type": "Di Tempat",
+          "responsibilities": [
+            "Menyelesaikan 100+ endpoint/task pada proyek Care Omni Loyalty melalui reverse engineering dan implementasi sistem.",
+            "Menyelesaikan 38 bug, yang secara langsung meningkatkan stabilitas dan performa sistem.",
+            "Mengembangkan fitur change request (Add Event Homepage EAC) berdasarkan kebutuhan bisnis.",
+            "Membangun komponen Front End untuk Eiger Career Page (Homepage, FAQ, Kebijakan Privasi) menggunakan pendekatan modular dan kode yang bersih.",
+            "Mengembangkan fitur CMS (submission document list & detail) dan mengintegrasikannya dengan API backend.",
+            "Berkontribusi dalam pengembangan sistem Product Information Management (PIM) baik di sisi Front End maupun Back End (attribute list, group, mapping).",
+            "Melakukan pengujian API, debugging, dan pemantauan sistem."
+          ]
+        },
         "lab_law": {
           "position": "Pengembangan Web",
           "type": "Magang",

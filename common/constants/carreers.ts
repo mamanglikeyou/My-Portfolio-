@@ -2,6 +2,17 @@ import { CareerProps } from "../types/careers";
 
 export const CAREERS: CareerProps[] = [
   {
+    translationKey: "eiger",
+    company: "PT. Eigerindo Multi Produk Industri",
+    logo: "/images/careers/eiger.png",
+    location: "Bandung, Indonesia",
+    start_date: "2025-11",
+    end_date: "2026-04",
+    industry: "Manufacturing and Retail",
+    link: "https://www.eigerindo.co.id/",
+    isShow: true,
+  },
+  {
     translationKey: "lab_law",
     company: "LAB LAW",
     logo: "/images/careers/lab_law.jpg",
@@ -14,7 +25,7 @@ export const CAREERS: CareerProps[] = [
   },
   {
     translationKey: "inti",
-    company: "PT Industri Telekomunikasi Indonesia (Persero)",
+    company: "PT. Industri Telekomunikasi Indonesia (Persero)",
     logo: "/images/careers/inti.png",
     location: "Bandung, Indonesia",
     start_date: "2024-07",

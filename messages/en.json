@@ -62,6 +62,20 @@
       "show_responsibilities": "Show responsibilities",
       "hide_responsibilities": "Hide responsibilities",
       "careers": {
+        "eiger": {
+          "position": "Developer Engineer",
+          "type": "Internship",
+          "location_type": "Onsite",
+          "responsibilities": [
+            "Completed 100+ endpoints/tasks in the Care Omni Loyalty project through reverse engineering and system implementation.",
+            "Resolved 38 bugs, improving system stability and performance.",
+            "Developed a change request feature (Add Event Homepage EAC) based on business requirements.",
+            "Built Front End components for Eiger Career Page (Homepage, FAQ, Privacy Policy) using a modular and clean code approach.",
+            "Developed CMS features (submission document list & detail) and integrated them with backend API.",
+            "Contributed to Product Information Management (PIM) system development on both Front End and Back End (attribute list, group, mapping).",
+            "Conducted API testing, debugging, and system monitoring."
+          ]
+        },
         "lab_law": {
           "position": "Web Development",
           "type": "Internship",
