@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 const Story = () => {
   const t = useTranslations("AboutPage");
 
-  const paragrafData = [{ index: 1 }, { index: 2 }, { index: 3 }, { index: 4 }];
+  const paragrafData = [{ index: 1 }, { index: 2 }, { index: 3 }, { index: 4 }, { index: 5 }];
 
   return (
     <section className="space-y-4 leading-loose text-neutral-800 dark:text-neutral-300">

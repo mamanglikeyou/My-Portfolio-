@@ -45,11 +45,13 @@
     "resume": {
       "paragraf_1": "Halo! Saya adalah lulusan baru Teknik Informatika dengan minat besar pada Web Development dan Data Science. Selama masa studi, saya mendapatkan pengalaman langsung sebagai Full-stack Developer melalui program magang, serta mengerjakan berbagai proyek akademik di bidang Deep Learning, Natural Language Processing, dan sistem rekomendasi.",
 
-      "paragraf_2": "Saya senang mengubah ide menjadi solusi digital yang fungsional, baik melalui pengembangan aplikasi web menggunakan Laravel, PHP, MySQL, HTML, CSS, dan JavaScript, maupun dengan menganalisis data serta membangun model menggunakan Python, TensorFlow, dan PyTorch.",
+      "paragraf_2": "Saya juga telah mendapatkan pengalaman praktis berkontribusi dalam pengembangan sistem internal di lingkungan profesional, berfokus pada pengembangan fullstack, integrasi API, implementasi fitur, dan penanganan masalah. Saya berkolaborasi erat dengan tim QA dan System Analyst untuk memastikan kualitas, stabilitas, dan keselarasan sistem dengan kebutuhan bisnis.",
 
-      "paragraf_3": "Saya adalah individu yang analitis, adaptif, dan memiliki semangat belajar tinggi untuk terus berkembang serta berkontribusi dalam menciptakan teknologi yang inovatif dan berbasis data.",
+      "paragraf_3": "Selain itu, saya telah mengembangkan beberapa proyek berbasis data yang melibatkan prapemrosesan data, rekayasa fitur, pemodelan machine learning, clustering, dan pembuatan dasbor interaktif menggunakan alat-alat seperti Python, Streamlit, dan Looker Studio.",
 
-      "paragraf_4": "Salam hangat,"
+      "paragraf_4": "Saya adalah individu yang analitis, adaptif, dan memiliki semangat belajar tinggi untuk terus berkembang serta berkontribusi dalam menciptakan teknologi yang inovatif dan berbasis data.",
+
+      "paragraf_5": "Salam hangat,"
     },
     "career": {
       "title": "Karier",
