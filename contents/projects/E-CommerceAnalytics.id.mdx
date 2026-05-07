@@ -1,0 +1,45 @@
+---
+title: "Analitik Pelanggan E-Commerce"
+summary: "Sebuah dasbor interaktif yang dibangun dengan Streamlit untuk menganalisis perilaku pelanggan e-commerce menggunakan segmentasi RFM dan distribusi geospasial."
+---
+
+## Gambaran Umum (Overview)
+
+Proyek **E-Commerce Customer Analytics** adalah sebuah dasbor berbasis data yang dibangun menggunakan **Streamlit**. Dasbor ini dirancang untuk mengubah data mentah transaksi e-commerce menjadi wawasan bisnis yang dapat ditindaklanjuti (*actionable insights*). Fokus utama dari proyek ini adalah untuk memahami perilaku pembelian pelanggan melalui **Analisis RFM** (Recency, Frequency, Monetary) serta mengeksplorasi distribusi pendapatan secara geografis menggunakan **Analisis Geospasial**.
+
+## Penilaian & Pembersihan Data (Data Assessment & Cleaning)
+
+Sebelum menarik wawasan apa pun, dataset mentah (meliputi pesanan, pelanggan, dan pembayaran) melalui proses penilaian dan pembersihan yang ketat:
+- **Pengecekan Kualitas Data**: Mengevaluasi struktur data, menangani nilai yang kosong, dan mengoreksi tipe data yang tidak sesuai.
+- **Agregasi & Penggabungan**: Membersihkan `orders_dataset` dan `order_payments_dataset` dengan menghilangkan *noise* yang tidak relevan, serta melakukan agregasi nilai pembayaran per pesanan.
+- **Integrasi**: Menggabungkan data transaksi dengan `customers_dataset` untuk menambahkan informasi geografis pelanggan, sehingga menciptakan satu dataset utama yang terstruktur dan andal.
+
+## Exploratory Data Analysis (EDA)
+
+Fase EDA mengungkap beberapa karakteristik kunci dari platform e-commerce ini:
+- **Ketimpangan Geografis**: Distribusi pelanggan sangat tidak merata di berbagai *state* (negara bagian) dan kota.
+- **Perilaku Pembayaran**: Analisis terhadap pembayaran pesanan menunjukkan berbagai variasi metode pembayaran dan adanya lebih dari satu transaksi pembayaran dalam satu pesanan.
+- **Waktu Pemesanan**: Mengonversi waktu pesanan ke dalam format *datetime* memberikan gambaran yang jelas mengenai alur transaksi dan membantu mengisolasi pesanan yang berhasil diselesaikan untuk analisis lebih dalam.
+
+## Analisis Utama
+
+### 1. Segmentasi Pelanggan RFM
+Untuk memahami loyalitas dan nilai pelanggan, analisis RFM dilakukan berdasarkan:
+- **Recency**: Seberapa baru seorang pelanggan melakukan pembelian.
+- **Frequency**: Seberapa sering mereka membeli.
+- **Monetary**: Seberapa banyak uang yang mereka habiskan.
+
+Pelanggan dikelompokkan ke dalam beberapa segmen menggunakan pendekatan penilaian berbasis kuantil. Pendekatan *clustering* (pengelompokan berbasis aturan) juga diterapkan untuk mengkategorikan pelanggan ke dalam segmen nilai Rendah, Menengah, dan Tinggi yang murni didasarkan pada kontribusi pendapatan (moneter).
+
+### 2. Distribusi Pendapatan Geospasial
+Menggunakan **Folium** dan diagram batang, proyek ini memetakan distribusi geografis dari pelanggan dan pendapatan:
+- Peta *Choropleth* memberikan gambaran spasial mengenai aktivitas e-commerce.
+- Visualisasi tersebut secara jelas mengidentifikasi wilayah mana yang memberikan kontribusi terbesar terhadap total pendapatan.
+
+## Kesimpulan & Wawasan Bisnis
+
+**Nilai & Loyalitas Pelanggan**
+Analisis RFM mengungkap bahwa meskipun segmen *Potential Loyalist* dan *Others* memiliki jumlah pelanggan terbanyak, segmen *Champions* justru sangat kecil. Namun yang menarik, segmen *Potential Loyalist* memberikan kontribusi pendapatan tertinggi. Hal ini menegaskan bahwa nilai bisnis tidak hanya didorong oleh tingkat loyalitas, tetapi juga oleh besarnya skala jumlah pelanggan dalam suatu segmen. **Saran Strategis**: Fokuskan upaya pemasaran untuk membina para *Potential Loyalists* agar menjadi aset jangka panjang perusahaan.
+
+**Dominasi Geografis**
+Analisis geospasial menunjukkan bahwa aktivitas e-commerce sangat terpusat. **Sao Paulo (SP)** mendominasi secara signifikan baik dalam jumlah pelanggan maupun total pendapatan, diikuti oleh Rio de Janeiro (RJ) dan Minas Gerais (MG). **Saran Strategis**: Optimalkan strategi logistik, pemasaran regional, dan ekspansi pasar dengan memanfaatkan *state* yang sangat terurbanisasi dan memiliki pertumbuhan tinggi ini.

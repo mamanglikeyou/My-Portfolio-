@@ -1,0 +1,45 @@
+---
+title: "E-Commerce Customer Analytics"
+summary: "An interactive dashboard built with Streamlit for analyzing e-commerce customer behavior using RFM segmentation and geospatial distribution."
+---
+
+## Overview
+
+The **E-Commerce Customer Analytics** project is a data-driven dashboard built using **Streamlit**. It is designed to transform raw e-commerce transaction data into actionable business insights. The primary focus of the dashboard is to understand customer behavior through **RFM Analysis** (Recency, Frequency, Monetary) and to explore the geographic distribution of revenue using **Geospatial Analysis**.
+
+## Data Assessment & Cleaning
+
+Before extracting insights, the raw datasets (including orders, customers, and payments) underwent a rigorous assessment and cleaning process:
+- **Data Quality Check**: Evaluated data structures, handled missing values, and corrected mismatched data types.
+- **Aggregation & Merging**: Cleaned the `orders_dataset` and `order_payments_dataset` by removing irrelevant noise and aggregating payment values per order.
+- **Integration**: Merged the transaction data with the `customers_dataset` to append geographic information, creating a single, structured, and reliable master dataset.
+
+## Exploratory Data Analysis (EDA)
+
+The EDA phase uncovered several key characteristics of the e-commerce platform:
+- **Geographic Imbalance**: Customer distribution is highly uneven across different states and cities.
+- **Payment Behavior**: Analysis of order payments revealed a variety of payment methods and highlighted instances of multiple payment transactions per order.
+- **Order Timing**: Converting order timestamps into datetime formats provided a clear view of transaction flows and helped isolate successfully completed orders for deeper analysis.
+
+## Key Analyses
+
+### 1. RFM Customer Segmentation
+To understand customer loyalty and value, an RFM analysis was performed based on:
+- **Recency**: How recently a customer made a purchase.
+- **Frequency**: How often they buy.
+- **Monetary**: How much they spend.
+
+Customers were grouped into several segments using a quantile-based scoring approach. A clustering approach (rule-based binning) was also applied to categorize customers into Low, Mid, and High-value segments based strictly on monetary contribution.
+
+### 2. Geospatial Revenue Distribution
+Using **Folium** and bar charts, the project mapped the geographic distribution of customers and revenue:
+- Choropleth maps provided a spatial overview of e-commerce activity.
+- The visualizations clearly identified which regions contributed the most to the total revenue.
+
+## Conclusion & Business Insights
+
+**Customer Value & Loyalty**
+The RFM analysis revealed that while the *Potential Loyalist* and *Others* segments hold the largest number of customers, the *Champions* segment is surprisingly small. However, the *Potential Loyalist* segment contributes the highest total revenue. This highlights that business value is driven not just by loyalty, but by the sheer scale of the customer base in a segment. **Strategic takeaway**: Focus marketing efforts on nurturing *Potential Loyalists* into long-term assets.
+
+**Geographic Dominance**
+Geospatial analysis showed that e-commerce activity is heavily concentrated. **Sao Paulo (SP)** dominates significantly in both customer count and total revenue, followed by Rio de Janeiro (RJ) and Minas Gerais (MG). **Strategic takeaway**: Optimize logistics, regional marketing, and market expansion strategies by capitalizing on these high-growth, highly urbanized states.
