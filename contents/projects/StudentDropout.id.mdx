@@ -1,0 +1,57 @@
+---
+title: "Sistem Prediksi Dropout & Analitik Risiko Siswa"
+summary: "Sistem peringatan dini yang menggabungkan Machine Learning dan Business Intelligence untuk memprediksi siswa yang rentan putus sekolah (dropout) dan mengidentifikasi faktor risiko utamanya."
+---
+
+## Gambaran Umum (Overview)
+
+Tingginya angka putus sekolah (_dropout_) merupakan masalah besar bagi institusi pendidikan, yang tidak hanya berdampak pada reputasi tetapi juga stabilitas operasional. Proyek **Student Dropout Prediction & Risk Analytics** ini dikembangkan untuk membantu **Jaya Jaya Institut** mengatasi tingkat _dropout_ yang kritis, yakni sebesar 32.1%. Melalui pemanfaatan _Exploratory Data Analysis_ (EDA), Machine Learning, dan dasbor _Business Intelligence_, proyek ini menyediakan sistem peringatan dini yang kuat untuk mendeteksi siswa berisiko sebelum mereka memutuskan untuk berhenti kuliah.
+
+## Permasalahan Bisnis & Cakupan
+
+Tantangan utama yang dihadapi oleh institusi ini meliputi:
+
+- Tingkat _dropout_ yang tinggi meskipun secara umum institusi memiliki reputasi akademik yang baik.
+- Ketiadaan mekanisme deteksi dini, yang menyebabkan keterlambatan dalam memberikan intervensi bimbingan akademik.
+- Kurangnya pemahaman yang jelas mengenai faktor-faktor utama yang memengaruhi keputusan siswa untuk _dropout_.
+
+Untuk mengatasinya, proyek ini menganalisis dataset komprehensif (4424 baris data, 37 fitur) yang mencakup demografi, latar belakang keluarga, keuangan, dan performa akademik. Solusi yang ditawarkan mencakup pengembangan model **Random Forest Classifier** dan sebuah purwarupa aplikasi **Streamlit** interaktif untuk prediksi secara _online_.
+
+## Wawasan Data & Tingkat Kepentingan Fitur
+
+Melalui analisis data dan ekstraksi _feature importance_ dari Machine Learning, beberapa pendorong utama _dropout_ siswa berhasil diidentifikasi:
+
+1. **Performa Akademik adalah Kunci**: Jumlah mata kuliah yang disetujui (_approved_) dan nilai yang diraih pada semester 1 dan 2 merupakan prediktor terkuat terjadinya _dropout_. Siswa yang kesulitan di awal semester memiliki risiko tertinggi.
+2. **Stabilitas Keuangan**: Faktor finansial memainkan peran yang sangat signifikan. Siswa yang menunggak pembayaran uang kuliah memiliki tingkat _dropout_ yang jauh lebih tinggi.
+3. **Beasiswa sebagai Pelindung**: Status sebagai penerima beasiswa secara signifikan mengurangi kemungkinan _dropout_, memberikan jaring pengaman krusial bagi siswa rentan.
+4. **Usia Saat Mendaftar**: Siswa yang mendaftar pada usia yang lebih tua cenderung memiliki risiko _dropout_ yang lebih tinggi, kemungkinan besar karena mereka harus menyeimbangkan tanggung jawab lain seperti pekerjaan atau keluarga.
+
+## Machine Learning & Penerapan (Deployment)
+
+Sebuah model **Random Forest Classifier** dilatih untuk memprediksi apakah seorang siswa akan _Graduate_ (Lulus), _Dropout_ (Putus Sekolah), atau tetap _Enrolled_ (Terdaftar). Untuk menangani ketidakseimbangan kelas (_class imbalance_), model ini di-_tuning_ menggunakan `RandomizedSearchCV` dan parameter `class_weight='balanced'`.
+Model final beserta `StandardScaler`-nya diekspor sebagai artefak _joblib_ dan diintegrasikan ke dalam aplikasi web **Streamlit**. Aplikasi ini memungkinkan pengguna untuk memasukkan profil siswa dan seketika itu juga menerima skor probabilitas serta penilaian risikonya.
+
+Model ini mencapai performa yang sangat mengesankan:
+
+- **Accuracy (93.11%)**: Menunjukkan bahwa secara keseluruhan, model mampu mengklasifikasikan 93.11% data siswa dengan benar ke dalam kategori yang tepat.
+- **F1-Score (91.17%)**: Nilai yang seimbang, mendeteksi siswa berisiko secara akurat sekaligus meminimalkan kesalahan prediksi pada siswa yang aman.
+- **AUC-ROC (97.21%)**: Menandakan kemampuan yang sangat luar biasa dalam membedakan kelas siswa yang berpotensi _dropout_ dan tidak.
+- **CV F1-Score (87.62% ±1.63%)**: Hasil pengujian silang (_Cross-Validation_) menunjukkan bahwa model stabil dan tidak _overfitting_.
+
+## Dashboard Bisnis
+
+Sebuah dasbor interaktif dibangun menggunakan **Google Looker Studio** untuk memantau performa siswa secara menyeluruh. Dasbor ini menampilkan:
+
+- KPI tingkat tinggi (High-level) termasuk total siswa, _dropout rate_, dan _graduate rate_.
+- Diagram batang terperinci yang merinci tingkat _dropout_ berdasarkan program studi, status beasiswa, dan rata-rata mata kuliah yang lulus.
+
+**Link Dashboard**: [Google Looker Studio Dashboard](https://datastudio.google.com/reporting/4682a376-05ad-405f-8818-17f7cb81f36b)
+
+## Rekomendasi yang Dapat Ditindaklanjuti
+
+Berdasarkan temuan-temuan tersebut, strategi berikut direkomendasikan bagi institusi:
+
+- **Terapkan Sistem Peringatan Dini**: Gunakan purwarupa Streamlit untuk menandai siswa berisiko langsung sejak semester pertama menggunakan data akademik awal.
+- **Bimbingan Akademik Intensif**: Berikan dukungan akademik langsung atau tutorial tambahan bagi siswa dengan jumlah mata kuliah lulus yang rendah di semester awal mereka.
+- **Perluas Bantuan Keuangan**: Tingkatkan ketersediaan beasiswa dan ciptakan rencana pembayaran yang fleksibel, karena tunggakan uang kuliah berkorelasi sangat kuat dengan _dropout_.
+- **Dukungan untuk Siswa Lebih Tua**: Tawarkan jadwal yang fleksibel atau opsi pembelajaran jarak jauh bagi pendaftar berusia lebih tua yang mungkin harus membagi waktu dengan banyak tanggung jawab.

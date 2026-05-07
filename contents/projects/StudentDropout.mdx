@@ -1,0 +1,57 @@
+---
+title: "Student Dropout Prediction & Risk Analytics"
+summary: "An early warning system combining Machine Learning and Business Intelligence to predict student dropouts and identify key risk factors in educational institutions."
+---
+
+## Overview
+
+Student attrition is a major concern for educational institutions, impacting both reputation and revenue. The **Student Dropout Prediction & Risk Analytics** project was developed to help Jaya Jaya Institut tackle a critical dropout rate of 32.1%. By utilizing **Exploratory Data Analysis (EDA)**, **Machine Learning**, and **Business Intelligence dashboards**, this project provides a robust early warning system to identify at-risk students before they leave.
+
+## Business Problem & Scope
+
+The primary challenges faced by the institution included:
+
+- A high dropout rate despite a generally good academic reputation.
+- The absence of an early detection mechanism, leading to delayed academic interventions.
+- A lack of clear understanding regarding the primary factors influencing a student's decision to drop out.
+
+To address this, the project involved analyzing a comprehensive dataset (4424 records, 37 features) covering demographics, family background, finances, and academic performance. The solution includes a **Random Forest Classifier** model and an interactive **Streamlit prototype** for online predictions.
+
+## Data Insights & Feature Importance
+
+Through data analysis and machine learning feature importance extraction, several key drivers of student dropouts were identified:
+
+1. **Academic Performance is Paramount**: The number of approved courses and grades achieved in the 1st and 2nd semesters were the strongest predictors of dropout. Students struggling early on are at the highest risk.
+2. **Financial Stability**: Financial factors play a significant role. Students whose tuition fees are not up to date have a vastly higher dropout rate.
+3. **Scholarships as a Shield**: Holding a scholarship significantly reduces the likelihood of dropping out, providing a crucial safety net for vulnerable students.
+4. **Age at Enrollment**: Students enrolling at an older age tend to have higher dropout risks, likely due to balancing external responsibilities like work or family.
+
+## Machine Learning & Deployment
+
+A **Random Forest Classifier** was trained to predict whether a student will Graduate, Dropout, or remain Enrolled. To handle class imbalances, the model was tuned using `RandomizedSearchCV` and the `class_weight='balanced'` parameter.
+The finalized model and its `StandardScaler` were exported as joblib artifacts and integrated into a **Streamlit** web application. This application allows users to input student profiles and instantly receive a probability score and risk assessment.
+
+The model achieved excellent performance metrics:
+
+- **Accuracy (93.11%)**: Successfully classified the vast majority of students into the correct categories.
+- **F1-Score (91.17%)**: Demonstrated a strong balance between Precision and Recall, minimizing false predictions.
+- **AUC-ROC (97.21%)**: Showed outstanding capability in distinguishing between potential dropouts and safe students.
+- **CV F1-Score (87.62% ±1.63%)**: Cross-validation confirmed the model is stable and not overfitting.
+
+## Business Dashboard
+
+An interactive dashboard was built using **Google Looker Studio** to monitor student performance comprehensively. It features:
+
+- High-level KPIs including total students, dropout rates, and graduate rates.
+- Detailed bar charts breaking down dropout rates by study program, scholarship status, and average approved courses.
+
+**Dashboard Link**: [Google Looker Studio Dashboard](https://datastudio.google.com/reporting/4682a376-05ad-405f-8818-17f7cb81f36b)
+
+## Actionable Recommendations
+
+Based on the findings, the following strategies were recommended for the institution:
+
+- **Deploy Early Warning Systems**: Utilize the Streamlit prototype to flag at-risk students right from the first semester using early academic data.
+- **Intensive Academic Mentoring**: Provide immediate academic support or tutorials for students with low approved course counts in their initial semesters.
+- **Expand Financial Aid**: Increase scholarship availability and create flexible payment plans, as tuition arrears strongly correlate with dropping out.
+- **Support for Older Students**: Offer flexible scheduling or remote learning options for older enrollees who may be juggling multiple responsibilities.
