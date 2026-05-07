@@ -1,8 +1,37 @@
-## 📖 Overview
+## Overview
 
----
+The **Indonesian Paraphrasing System** is an end-to-end _Natural Language Processing_ (NLP) project that implements an automatic paraphrasing system for the Indonesian language. This system is designed to generate new sentences with different structures and wording while faithfully preserving the semantic meaning of the original source text.
 
-This project is an implementation of an automatic Indonesian paraphrasing system using the IndoT5 (Text-to-Text Transfer Transformer) model.
-The system is designed to generate new sentences with different structures and wording while preserving the original meaning of the source text.
+The system leverages **IndoT5**, a pre-trained _Text-to-Text Transfer Transformer_ model specifically adapted for the Indonesian language, making it a significant contribution to the growing field of Bahasa Indonesia-based artificial intelligence.
 
-With the support of deep learning and Natural Language Processing (NLP) technology, this project represents a significant step forward in the development of Indonesian language–based artificial intelligence.
+## Architecture & Methodology
+
+The project follows a structured machine learning pipeline from raw data collection to final model evaluation:
+
+- **Data Collection & Preparation**:
+  The dataset was sourced from **Hugging Face**, containing Indonesian sentence pairs labeled as paraphrases or non-paraphrases. The pipeline filtered only valid paraphrase pairs (label = 1), then split the data into **80% Train**, **10% Validation**, and **10% Test** sets.
+
+- **Tokenization**:
+  The text data was processed using the `IndoT5Tokenizer`. Input and target texts were tokenized with max-length padding to ensure uniform tensor sizes before being fed into the model.
+
+- **Fine-Tuning IndoT5**:
+  The pre-trained `IndoT5` model was _fine-tuned_ on the prepared paraphrase dataset using the Hugging Face `Trainer` API. This transfer learning approach allows the model to adapt its general language understanding capabilities specifically to the paraphrasing task in Indonesian.
+
+- **Inference**:
+  After training, the model accepts raw Indonesian sentences as input, tokenizes them, and uses _beam search_ decoding to generate high-quality paraphrase candidates.
+
+## Model Evaluation
+
+The fine-tuned model was evaluated using standard NLP metrics on the held-out test set, achieving the following results:
+
+| Metric         | Score |
+| -------------- | ----- |
+| **BLEU Score** | 0.282 |
+| **ROUGE-1**    | 0.589 |
+| **ROUGE-2**    | 0.405 |
+| **ROUGE-L**    | 0.549 |
+| **METEOR**     | 0.495 |
+
+- **BLEU (0.282)**: Measures n-gram overlap between generated and reference paraphrases, indicating a reasonable lexical similarity.
+- **ROUGE-1/L (0.589 / 0.549)**: Reflects strong unigram and longest common subsequence overlap, demonstrating that the model preserves key vocabulary from the source.
+- **METEOR (0.495)**: Evaluates synonym-aware similarity, confirming the model's ability to generate semantically equivalent paraphrases using varied vocabulary.

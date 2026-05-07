@@ -1,8 +1,37 @@
-## 📖 Gambaran Umum
+## Gambaran Umum (Overview)
 
----
+**Indonesian Paraphrasing System** adalah proyek _Natural Language Processing_ (NLP) menyeluruh yang mengimplementasikan sistem parafrase otomatis untuk bahasa Indonesia. Sistem ini dirancang untuk menghasilkan kalimat baru dengan struktur dan diksi yang berbeda, namun tetap mempertahankan makna semantik dari teks sumber.
 
-Proyek ini merupakan implementasi sistem parafrase otomatis bahasa Indonesia menggunakan model IndoT5 (Text-to-Text Transfer Transformer).
-Sistem ini dirancang untuk menghasilkan kalimat baru dengan struktur dan diksi yang berbeda namun tetap mempertahankan makna asli dari teks sumber.
+Sistem ini memanfaatkan **IndoT5**, sebuah model pre-trained _Text-to-Text Transfer Transformer_ yang diadaptasi khusus untuk bahasa Indonesia, menjadikannya kontribusi yang signifikan dalam perkembangan kecerdasan buatan berbasis Bahasa Indonesia.
 
-Dengan dukungan teknologi deep learning dan Natural Language Processing (NLP), proyek ini merepresentasikan langkah signifikan dalam pengembangan kecerdasan buatan berbasis bahasa Indonesia.
+## Arsitektur & Metodologi
+
+Proyek ini mengikuti alur _machine learning_ yang terstruktur dari pengumpulan data mentah hingga evaluasi model akhir:
+
+- **Pengumpulan & Persiapan Data**:
+  Dataset bersumber dari **Hugging Face**, berisi pasangan kalimat bahasa Indonesia yang berlabel parafrase atau bukan parafrase. Alur kerja ini menyaring hanya pasangan parafrase yang valid (label = 1), lalu membagi data menjadi **80% Train**, **10% Validation**, dan **10% Test**.
+
+- **Tokenisasi (_Tokenization_)**:
+  Data teks diproses menggunakan `IndoT5Tokenizer`. Teks input dan target ditokenisasi dengan _max-length padding_ untuk memastikan ukuran tensor seragam sebelum dimasukkan ke dalam model.
+
+- **_Fine-Tuning_ IndoT5**:
+  Model pre-trained `IndoT5` di-_fine-tuning_ pada dataset parafrase yang telah disiapkan menggunakan Hugging Face `Trainer` API. Pendekatan _transfer learning_ ini memungkinkan model untuk mengadaptasikan kemampuan pemahaman bahasanya secara umum, secara spesifik untuk tugas parafrase dalam bahasa Indonesia.
+
+- **Inferensi (_Inference_)**:
+  Setelah pelatihan, model menerima kalimat bahasa Indonesia mentah sebagai input, mentokenisasinya, dan menggunakan _beam search decoding_ untuk menghasilkan kandidat parafrase yang berkualitas tinggi.
+
+## Evaluasi Model
+
+Model yang telah di-_fine-tuning_ dievaluasi menggunakan metrik NLP standar pada data uji (_test set_), dengan hasil sebagai berikut:
+
+| Metrik         | Skor  |
+| -------------- | ----- |
+| **BLEU Score** | 0.282 |
+| **ROUGE-1**    | 0.589 |
+| **ROUGE-2**    | 0.405 |
+| **ROUGE-L**    | 0.549 |
+| **METEOR**     | 0.495 |
+
+- **BLEU (0.282)**: Mengukur kecocokan _n-gram_ antara parafrase yang dihasilkan dengan referensi, menunjukkan kemiripan leksikal yang cukup baik.
+- **ROUGE-1/L (0.589 / 0.549)**: Mencerminkan kecocokan _unigram_ dan _longest common subsequence_ yang kuat, membuktikan bahwa model berhasil mempertahankan kosakata kunci dari sumber teks.
+- **METEOR (0.495)**: Mengevaluasi kemiripan dengan mempertimbangkan sinonim, mengkonfirmasi kemampuan model dalam menghasilkan parafrase yang setara secara semantik dengan menggunakan kosakata yang bervariasi.
