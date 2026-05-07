@@ -1,0 +1,28 @@
+---
+title: "Fruit and Vegetable Classification System"
+summary: "Model Deep Learning yang memanfaatkan arsitektur Convolutional Neural Network (CNN) untuk mengidentifikasi dan mengklasifikasikan gambar berbagai buah dan sayuran secara akurat."
+---
+
+## Gambaran Umum (Overview)
+
+**Fruit and Vegetable Classification System** adalah proyek akademis _Deep Learning_ menyeluruh (_end-to-end_) yang dikembangkan untuk mendemonstrasikan kemampuan _computer vision_.
+
+Dibangun menggunakan _Keras_ dan _TensorFlow_, proyek ini memanfaatkan dataset "Fruit and Vegetable Image Recognition" dari Kaggle. Tujuan utamanya adalah untuk membangun model cerdas yang mampu membedakan berbagai kelas buah dan sayuran secara otomatis hanya dengan berbekal input gambar mentah.
+
+## Arsitektur & Metodologi
+
+Inti dari proyek ini bertumpu pada **Convolutional Neural Network (CNN)** yang dibangun secara khusus (_custom-built_). Seluruh alur _machine learning_ disusun secara logis untuk memastikan model dapat belajar dan melakukan generalisasi dengan optimal:
+
+- **Pra-pemrosesan Citra (_Image Preprocessing_)**:
+  Dataset gambar mentah melalui tahap pra-pemrosesan yang ketat, termasuk penyesuaian skala (_rescaling_), pengubahan ukuran (_resizing_), dan normalisasi, untuk memastikan data yang dimasukkan ke dalam jaringan saraf tiruan seragam dan terstruktur.
+- **Pengembangan Arsitektur CNN**:
+  Model dibangun dengan beberapa _Convolutional Layers_ untuk mengekstraksi fitur spasial, diikuti oleh _pooling layers_ untuk mengurangi dimensi. Hal ini memungkinkan jaringan untuk mempelajari pola, tepi (_edges_), dan tekstur rumit yang menjadi ciri khas setiap kelas buah dan sayuran.
+- **Pelatihan & Kompilasi**:
+  Model dikompilasi dan dilatih secara berulang selama **32 epoch**, memungkinkan jaringan untuk terus menyesuaikan bobotnya dan meminimalkan fungsi kerugian (_loss function_).
+
+## Performa Model
+
+Model _deep learning_ ini mencapai metrik performa yang sangat membanggakan, membuktikan efektivitas dan stabilitasnya tanpa mengalami _overfitting_ yang parah:
+
+- **Test Accuracy**: Mencapai **84.40%**, menunjukkan kemampuan yang kuat untuk mengklasifikasikan gambar yang belum pernah dilihat sebelumnya secara akurat.
+- **Validation Accuracy**: Mencapai **84.04%**, membuktikan bahwa model tetap stabil di sepanjang fase pelatihan.
