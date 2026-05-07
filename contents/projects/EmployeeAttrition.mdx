@@ -1,0 +1,51 @@
+---
+title: "Employee Attrition Prediction & Analytics"
+summary: "A machine learning and data visualization project aimed at predicting and understanding employee turnover in an Edutech company to improve retention strategies."
+---
+
+## Overview
+
+High employee attrition rates pose a serious challenge for large organizations. The **Employee Attrition Prediction & Analytics** project was developed to help an Edutech company tackle a turnover rate exceeding 10% (reaching 16.9%). This project combines Exploratory Data Analysis (EDA), Machine Learning, and Business Intelligence to identify the root causes of employee turnover and predict individuals at high risk of leaving.
+
+## Business Problem & Scope
+
+The core issues faced by the company were:
+- Unacceptably high attrition rates leading to increased recruitment costs.
+- Unidentified key factors causing employees to resign.
+- A lack of a predictive system, forcing HR to be reactive rather than proactive.
+- Absence of real-time visual monitoring tools.
+
+To solve this, the project scope included deep-dive EDA, developing a **Random Forest Classifier** prediction model, building an interactive **Looker Studio Dashboard**, and providing actionable business recommendations.
+
+## Machine Learning Approach
+
+A **Random Forest Classifier** was trained and tuned using `RandomizedSearchCV`, adjusting for class imbalance with `class_weight='balanced'`. 
+
+The model achieved strong and reliable performance:
+- **Accuracy**: 82.08%
+- **AUC-ROC**: 0.7724, indicating good separation capability between leaving and staying employees.
+- **Cross-Validation F1-Score**: 0.4788 (±0.0307), confirming stability and lack of severe overfitting.
+
+A custom `prediction.py` script was also created to allow HR to input sample employee data and instantly receive an attrition risk score (Low, Medium, High).
+
+## Feature Importance Insights
+
+Analysis of the Random Forest feature importances revealed the primary drivers of attrition:
+1. **Workload**: `OverTime` was the #1 predictor. Employees working frequent overtime had an attrition rate near 30%, compared to ~10% for others.
+2. **Compensation & Benefits**: Variables like `StockOptionLevel`, `MonthlyIncome`, and `DailyRate` heavily influenced resignations, proving that competitive financial packages are crucial.
+3. **Demographics & Career Path**: `Age` (younger employees 18-30), `TotalWorkingYears`, and `JobLevel` showed that entry-level, younger staff are highly vulnerable to leaving if career paths are unclear.
+
+## Business Dashboard
+
+To facilitate continuous monitoring, an interactive dashboard was built using **Google Looker Studio**. The dashboard translates complex data into clear visual insights, including:
+- Real-time overall attrition rates.
+- Job roles with the highest turnover (e.g., Sales Representatives, Laboratory Technicians).
+- Visual breakdowns of the relationship between overtime, income, and attrition.
+
+## Actionable Recommendations for HR
+
+Based on the data, several strategic interventions were recommended:
+- **Strictly Manage Overtime**: Since overtime is the strongest predictor of attrition, HR must implement workload redistribution and cap excessive overtime hours.
+- **Adjust Compensation**: Provide targeted salary increases, retention bonuses, or better stock options for high-risk roles.
+- **Develop Young Talent**: Create structured mentoring and clear career development plans specifically aimed at employees aged 18-30.
+- **Deploy Predictive Interventions**: Utilize the deployed Machine Learning script to regularly score employee risk and proactively engage those flagged as HIGH or MEDIUM risk.

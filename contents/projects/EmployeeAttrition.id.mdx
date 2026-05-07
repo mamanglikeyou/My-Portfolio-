@@ -1,0 +1,51 @@
+---
+title: "Prediksi & Analitik Keluarnya Karyawan"
+summary: "Proyek machine learning dan visualisasi data yang bertujuan untuk memprediksi serta memahami tingkat keluarnya karyawan di sebuah perusahaan Edutech untuk meningkatkan strategi retensi."
+---
+
+## Gambaran Umum (Overview)
+
+Tingkat perputaran karyawan (*attrition rate*) yang tinggi merupakan tantangan serius bagi organisasi berskala besar. Proyek **Employee Attrition Prediction & Analytics** ini dikembangkan untuk membantu sebuah perusahaan Edutech mengatasi masalah *turnover* yang mencapai lebih dari 10% (tepatnya 16.9%). Proyek ini menggabungkan *Exploratory Data Analysis* (EDA), Machine Learning, dan *Business Intelligence* untuk mengidentifikasi akar penyebab keluarnya karyawan dan memprediksi individu yang berisiko tinggi untuk *resign*.
+
+## Permasalahan Bisnis & Cakupan
+
+Isu-isu utama yang dihadapi oleh perusahaan meliputi:
+- Tingkat *attrition* yang tidak wajar, memicu pembengkakan biaya rekrutmen.
+- Belum teridentifikasinya faktor-faktor kunci penyebab karyawan keluar.
+- Tidak adanya sistem prediktif, memaksa HR untuk selalu bertindak reaktif (bukan proaktif).
+- Kurangnya visualisasi data secara *real-time* untuk pemantauan.
+
+Untuk mengatasi ini, cakupan proyek meliputi EDA secara mendalam, pengembangan model prediksi **Random Forest Classifier**, pembuatan **Dashboard Looker Studio** yang interaktif, serta perumusan rekomendasi bisnis yang dapat ditindaklanjuti.
+
+## Pendekatan Machine Learning
+
+Model **Random Forest Classifier** dilatih dan di-*tuning* menggunakan `RandomizedSearchCV`, dengan penyesuaian ketidakseimbangan kelas (*class imbalance*) menggunakan `class_weight='balanced'`.
+
+Model ini mencapai performa yang kuat dan dapat diandalkan:
+- **Akurasi (Accuracy)**: 82.08%
+- **AUC-ROC**: 0.7724, menunjukkan kemampuan yang baik dalam membedakan antara karyawan yang akan keluar dan yang bertahan.
+- **Cross-Validation F1-Score**: 0.4788 (±0.0307), mengonfirmasi stabilitas model dan ketiadaan *overfitting* yang parah.
+
+Sebuah *script* khusus bernama `prediction.py` juga dibuat agar HR dapat memasukkan data sampel karyawan dan langsung menerima skor risiko *attrition* (Low, Medium, High).
+
+## Wawasan Penting dari Fitur (Feature Importance Insights)
+
+Analisis tingkat kepentingan fitur (*feature importance*) dari model Random Forest mengungkapkan pendorong utama *attrition*:
+1. **Beban Kerja (Workload)**: `OverTime` (Lembur) adalah prediktor nomor #1. Karyawan yang sering lembur memiliki tingkat *attrition* hampir 30%, dibandingkan dengan karyawan yang tidak lembur (~10%).
+2. **Kompensasi & Tunjangan**: Variabel seperti `StockOptionLevel`, `MonthlyIncome`, dan `DailyRate` sangat memengaruhi keputusan untuk mundur, membuktikan bahwa paket finansial yang kompetitif sangat krusial.
+3. **Demografi & Jenjang Karier**: `Age` (usia muda 18-30 tahun), `TotalWorkingYears`, dan `JobLevel` menunjukkan bahwa staf muda tingkat pemula (*entry-level*) sangat rentan untuk keluar jika jenjang karier mereka tidak jelas.
+
+## Dashboard Bisnis
+
+Untuk memfasilitasi pemantauan yang berkelanjutan, sebuah dasbor interaktif dibangun menggunakan **Google Looker Studio**. Dasbor ini menerjemahkan data yang rumit menjadi wawasan visual yang jelas, termasuk:
+- Ikhtisar angka *attrition rate* secara keseluruhan secara seketika.
+- Posisi pekerjaan dengan perputaran tertinggi (misalnya, *Sales Representatives*, *Laboratory Technicians*).
+- Rincian visual mengenai hubungan antara lembur, pendapatan, dan keputusan untuk *resign*.
+
+## Rekomendasi yang Dapat Ditindaklanjuti untuk HR
+
+Berdasarkan data tersebut, beberapa intervensi strategis direkomendasikan:
+- **Kelola Lembur secara Ketat**: Karena lembur adalah prediktor terkuat untuk *attrition*, HR harus mengimplementasikan redistribusi beban kerja dan membatasi jam lembur yang berlebihan.
+- **Sesuaikan Kompensasi**: Berikan kenaikan gaji yang tepat sasaran, bonus retensi, atau alokasi opsi saham yang lebih baik untuk posisi berisiko tinggi.
+- **Kembangkan Talenta Muda**: Ciptakan program pendampingan (*mentoring*) terstruktur dan rencana pengembangan karier yang jelas khusus untuk karyawan berusia 18-30 tahun.
+- **Terapkan Intervensi Prediktif**: Gunakan *script* Machine Learning yang telah di-*deploy* untuk menilai risiko karyawan secara berkala dan berikan perhatian khusus secara proaktif kepada mereka yang masuk kategori risiko *HIGH* atau *MEDIUM*.
